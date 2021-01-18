@@ -69,19 +69,49 @@ public class Main
      * @param  2D matrix
      */
 
-    public static void sort()
+    public static void sort(int[][] m)
     {
-        int temp;
+
 
         for(int i = 0; i < n; i ++)
         {
             for(int j = 0; j < n; j ++)
             {
+                //this step is definitely off, need to come back and fix this.
 
+                int min = min(matrixAlpha);
+                int temp = m[min];
+                m[min][min] = m[i][j];
+                m[i][j] = temp;
             }
 
         }
 
+    }
+
+    /**
+     * Method to find the smallest number
+     * @param a 2D matrix to work with
+     */
+
+    public static int min(int[][] m)
+    {
+        int min = m[0][0];
+
+        for(int i = 0; i < n; i ++)
+        {
+            for(int j = 0; j < n; j ++)
+            {
+                if(m[i][j] < min)
+                {
+                    min = m[i][j];
+
+                }
+            }
+
+        }
+
+        return min;
     }
 
     public static void main(String[] args)
