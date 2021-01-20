@@ -64,6 +64,20 @@ public class Main
     }
 
     /**
+     * Method to swap
+     *
+     * @param 2D array to swap
+     */
+
+    public static void swap(int[][] m, int i, int j, int k, int p)
+    {
+        int temp = m[i][j];
+        m[i][j] = m[k][p];
+        m[k][p] = temp;
+
+    }
+
+    /**
      * Method to sort out a Matrix
      *
      * @param  2D matrix
@@ -79,10 +93,22 @@ public class Main
             {
                 //this step is definitely off, need to come back and fix this.
 
-                int min = min(matrixAlpha);
-                int temp = m[min];
-                m[min][min] = m[i][j];
-                m[i][j] = temp;
+                //int min = minimum(m);
+                //m[min][min] = m[i][j];
+                //swap(m);
+
+                for(int k = 0; k <n; k++)
+                {
+                    for(int l = 0; l < n; l++)
+                    {
+                        if()
+                        {
+                            int temp;
+                        }
+
+                    }
+                }
+
             }
 
         }
@@ -94,7 +120,7 @@ public class Main
      * @param a 2D matrix to work with
      */
 
-    public static int min(int[][] m)
+    public static int minimum(int[][] m)
     {
         int min = m[0][0];
 
